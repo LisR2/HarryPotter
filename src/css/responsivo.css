@@ -1,0 +1,136 @@
+/* Estilo Geral */
+body {
+    background-color: #2f2d2e;
+    color: #e5c07b;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #e5c07b;
+}
+
+header h1 {
+    color: #e5c07b;
+    font-size: 3em;
+    margin: 0;
+}
+
+/* Estilo da Pesquisa */
+.pesquisa {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    flex-wrap: wrap; /* Flexibilidade para dispositivos menores */
+}
+
+.pesquisa input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #e5c07b;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #e5c07b;
+    margin-right: 10px;
+    margin-bottom: 10px; /* Espaço extra em dispositivos menores */
+}
+
+.pesquisa button {
+    padding: 10px 20px;
+    background-color: #e5c07b;
+    border: none;
+    color: #1a1a1a;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pesquisa button:hover {
+    background-color: #c49b43;
+}
+
+/* Estilo dos Filmes */
+.filmes {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.nome-filme {
+    font-size: 2em;
+    margin-top: 40px;
+    color: #b8860b;
+    text-shadow: 2px 2px #000;
+    border-bottom: 2px solid #b8860b;
+    padding-bottom: 5px;
+}
+
+.descricao-filme {
+    margin-bottom: 30px;
+    background-color: #3a3a3a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+}
+
+.descricao-filme p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.descricao-filme b {
+    color: #f4a460;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em; /* Reduz o tamanho da fonte para tablets */
+    }
+
+    .pesquisa input[type="text"] {
+        width: 100%; /* Usa largura total em telas menores */
+        margin-right: 0; /* Remove a margem direita */
+    }
+
+    .pesquisa button {
+        width: 100%; /* Botão ocupa toda a largura */
+    }
+
+    .filmes {
+        padding: 10px; /* Reduz o padding em telas menores */
+    }
+
+    .nome-filme {
+        font-size: 1.8em; /* Reduz o tamanho da fonte para tablets */
+    }
+
+    .descricao-filme {
+        padding: 15px; /* Reduz o padding das descrições */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em; /* Reduz ainda mais o tamanho da fonte para smartphones */
+    }
+
+    .pesquisa {
+        flex-direction: column; /* Coloca os elementos de pesquisa em uma coluna */
+        align-items: center;
+    }
+
+    .nome-filme {
+        font-size: 1.5em; /* Reduz o tamanho da fonte para smartphones */
+    }
+
+    .descricao-filme {
+        padding: 10px; /* Reduz ainda mais o padding das descrições */
+    }
+}
